@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
+body {
+  background-color: #16167b;
+  background-image: radial-gradient(
+    ellipse at bottom,
+    #3467a1 0%,
+    #8e95b8 100%
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.centerDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Container--Gastracker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+  border-radius: 20px;
+  width: 8000px;
+  padding: 5px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Box--Gastracker--Ethereum {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(60, 60, 61, 0.5);
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.Box--Gastracker--Ethereum:hover {
+  background-color: #0f0e10;
+}
+
+.Box--Gastracker--Polygon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(130, 71, 229, 0.5);
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.Box--Gastracker--Polygon:hover {
+  background-color: #6d28d9;
+}
+
+.Box--Gastracker--Arbitrum {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(6, 77, 176, 0.5);
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.Box--Gastracker--Arbitrum:hover {
+  background-color: #00248f;
+}
+
+.ethAddress {
+  width: 500px;
+}
+
+.Nav--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px 0px;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.Nav--title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.Nav--title--more {
+  margin: 0;
+  font-size: 24px;
+}
+
+.Nav--title--less {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.Nav--input {
+  height: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+  color: #4d4d4d;
+}
+
+.ethAddress {
+  width: 300px;
+  height: calc(max(10px, 2vh - 20px));
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: #4d4d4d;
+  resize: none;
+}
+
+.Nav--button {
+  background-color: #fff;
+  color: #7c5ce2;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.Nav--button:hover {
+  background-color: #7c5ce2;
+  color: #fff;
+}
+
+.Nav--input--balance {
+  margin: 0;
+}
+
+.Nav--input--balance--result {
+  margin: 0;
+}
+
+.Overview--address {
+  color: #4d4d4d;
+  opacity: 0.8;
+}
+
+.Overview--container--matic {
+  margin-left: 30px;
+}
+
+.Overview-container-sub {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 10px;
+  background-color: rgb(69, 49, 84);
+}
+
+.blockNumber {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.Chain--selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background: rgba(52, 103, 161, 0.5);
+  border-radius: 10px;
+  width: 205px;
+}
+.Chain--selector2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background: rgba(52, 103, 161, 0.5);
+  border-radius: 10px;
+  width: 205px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Chain--selctor--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  margin: 5px 10px;
+  border: 2px solid #2268b8;
+  background: rgba(52, 103, 161, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-top: 0;
+}
+
+.Box--title {
+  padding: 5px 5px 0px 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: flex;
+  align-self: flex-start;
+}
+.Data--title {
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 5px;
+  padding-top: 0px;
 }
